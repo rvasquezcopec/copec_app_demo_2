@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id station:</strong>
+  <%= @gas_station.id_station %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gas_station.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @gas_station.image %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @gas_station.address %>
+</p>
+
+<%= link_to 'Edit', edit_gas_station_path(@gas_station) %> |
+<%= link_to 'Back', gas_stations_path %>
