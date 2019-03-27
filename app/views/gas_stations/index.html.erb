@@ -2,8 +2,6 @@
 
 <h1>Estaciones de servicio</h1>
 
-
-
 <div class="container">
   <div class="row">
 
@@ -21,9 +19,9 @@
       <p>Direccion: <%= gas_station.address %></p>
 
       <p>
-        <%= link_to 'Show', gas_station %>
-        <%= link_to 'Edit', edit_gas_station_path(gas_station) %>
-        <%= link_to 'Destroy', gas_station, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Show', gas_station, class: 'btn btn-primary' %>
+        <%= link_to 'Edit', edit_gas_station_path(gas_station) , class: 'btn btn-warning'%>
+        <%= link_to 'Destroy', gas_station, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
         </p>
 
 
@@ -31,5 +29,5 @@
     </div>
   </div>
 <% end %>
-
+</div>
 <%= link_to 'New Gas Station', new_gas_station_path %>
