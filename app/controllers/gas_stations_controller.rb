@@ -1,5 +1,7 @@
 class GasStationsController < ApplicationController
   before_action :set_gas_station, only: [:show, :edit, :update, :destroy]
+#Se agrego esta linea para decir que todo requiere autenticacion excepto Index
+  before_action :authenticate_user!, except: [:index]
 
   # GET /gas_stations
   # GET /gas_stations.json
