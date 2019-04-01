@@ -27,6 +27,7 @@ class GasStationsController < ApplicationController
   # POST /gas_stations.json
   def create
     @gas_station = GasStation.new(gas_station_params)
+    @gas_station.user = current_user
 
     respond_to do |format|
       if @gas_station.save
